@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to use this Python crawler!</title>
+</head>
+<body>
+<h1 align="center">
+    Python crawler available on <a href='https://news.whu.edu.cn/wdyw.htm'>news.whu.edu.cn</a>!
+</h1>
+<h3>
+    If you don't wanna search anything, leave that blank alone please.
+</h3>
+<form action="../pycrawler/" method="post">
+    {% csrf_token %}
+    <p>You can type how many pieces of news you'd like to get from <a href='https://news.whu.edu.cn/wdyw.htm'>this
+        website</a> here</p>
+    <p>An integer from 1 to 99 is expected</p>
+    <input type="text" name="required_pieces_number" maxlength="2" size="6"><br><br>
+
+    <p>And if you wanna search something in these pages, type what U wanna get here. <br>
+        We will return all the news we found that including these key word(s) among these pages</p>
+    <input name="key_word" type="text"/><br>
+    <input type="submit" value="Confirm"/>
+</form>
+
+</body>
+</html>
